@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="_base.css">
+<title>03 · Solicitar viaje</title>
+</head>
+<body class="canvas">
+  <div class="phone"><div class="screen">
+    <div class="statusbar"><span>9:41</span><span class="sb-right">●●● ▂▄▆ ▮</span></div>
+
+    <div class="mapsim" style="flex:1">
+      <svg viewBox="0 0 360 420" preserveAspectRatio="none">
+        <path d="M60 330 C120 260 180 300 250 180 S320 90 330 60"
+              fill="none" stroke="#2563eb" stroke-width="6" stroke-linecap="round" stroke-dasharray="1 0"/>
+        <circle cx="60" cy="330" r="9" fill="#2563eb" stroke="#fff" stroke-width="4"/>
+        <circle cx="330" cy="60" r="9" fill="#ef4444" stroke="#fff" stroke-width="4"/>
+      </svg>
+    </div>
+
+    <div class="sheet" style="margin-top:-60px">
+      <div class="handle"></div>
+      <div class="label">Destino</div>
+      <div class="field" style="margin:6px 0 14px">
+        <span>📍</span><span style="font-weight:600">Av. Monseñor Rivero #200</span>
+      </div>
+
+      <div class="card flat" style="padding:12px;margin-bottom:10px;border:2px solid var(--brand);display:flex;align-items:center;gap:12px">
+        <div class="ic" style="width:42px;height:42px;border-radius:12px;background:var(--brand-soft);display:grid;place-items:center;font-size:22px">🚗</div>
+        <div style="flex:1"><div style="font-weight:700">Auto</div><div class="tiny muted">3 min · 1–4 pasajeros</div></div>
+        <div class="price">Bs 36</div>
+      </div>
+      <div class="card flat" style="padding:12px;margin-bottom:14px;display:flex;align-items:center;gap:12px">
+        <div class="ic" style="width:42px;height:42px;border-radius:12px;background:#f1f5f9;display:grid;place-items:center;font-size:22px">🏍️</div>
+        <div style="flex:1"><div style="font-weight:700">Moto</div><div class="tiny muted">2 min · 1 pasajero</div></div>
+        <div class="price">Bs 24</div>
+      </div>
+
+      <p class="tiny muted" style="margin:-2px 0 12px">Tarifa = 6 km × Bs 3,50 + 18 min × Bs 0,50 + Bs 6 (uso de app)</p>
+
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px">
+        <span class="badge cash">💵 Efectivo</span>
+        <span class="tiny muted">Pago al finalizar el viaje</span>
+      </div>
+
+      <button class="btn primary">Solicitar viaje · Bs 36</button>
+    </div>
+  </div></div>
+</body>
+</html>

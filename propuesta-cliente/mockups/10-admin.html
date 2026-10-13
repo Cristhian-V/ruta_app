@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="_base.css">
+<title>10 · Panel de administración</title>
+</head>
+<body class="canvas wide">
+  <div class="admin">
+    <aside class="side">
+      <div class="brand">🛣️ Ruta <span style="font-size:11px;font-weight:600;opacity:.6">ADMIN</span></div>
+      <a class="on">📊 Dashboard</a>
+      <a>👥 Usuarios</a>
+      <a>🚗 Conductores</a>
+      <a>🧾 Viajes</a>
+      <a>🛒 Mandados</a>
+      <a>💰 Tarifas y comisiones</a>
+      <a>📈 Reportes</a>
+      <a>⚙️ Configuración</a>
+    </aside>
+
+    <div class="main">
+      <div class="top">
+        <div style="font-weight:700;font-size:16px">Dashboard general</div>
+        <div style="flex:1"></div>
+        <span class="badge soft">Últimos 30 días</span>
+        <div class="avatar">AD</div>
+      </div>
+
+      <div class="content">
+        <div class="kpis">
+          <div class="kpi"><div class="k">Usuarios</div><div class="num">1.000</div><div class="d">▲ 12% vs. mes anterior</div></div>
+          <div class="kpi"><div class="k">Conductores</div><div class="num">35</div><div class="d">▲ 5 esta semana</div></div>
+          <div class="kpi"><div class="k">Viajes hoy</div><div class="num">42</div><div class="d">▲ 8%</div></div>
+          <div class="kpi"><div class="k">Comisión recaudada</div><div class="num">Bs 152</div><div class="d">10% · 42 viajes</div></div>
+        </div>
+
+        <div class="panels">
+          <div class="panel">
+            <div class="ph">Viajes por día</div>
+            <div class="bars">
+              <div class="col"><div class="bar" style="height:45%"></div><div class="lbl">Lun</div></div>
+              <div class="col"><div class="bar" style="height:60%"></div><div class="lbl">Mar</div></div>
+              <div class="col"><div class="bar" style="height:40%"></div><div class="lbl">Mié</div></div>
+              <div class="col"><div class="bar" style="height:75%"></div><div class="lbl">Jue</div></div>
+              <div class="col"><div class="bar" style="height:90%"></div><div class="lbl">Vie</div></div>
+              <div class="col"><div class="bar" style="height:70%"></div><div class="lbl">Sáb</div></div>
+              <div class="col"><div class="bar" style="height:55%"></div><div class="lbl">Dom</div></div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="ph">Últimos viajes</div>
+            <table class="mini">
+              <tr><th>Pasajero</th><th>Tipo</th><th>Estado</th><th>Total</th></tr>
+              <tr><td>Carlos M.</td><td>Viaje</td><td><span class="tag ok">Finalizado</span></td><td>Bs 36</td></tr>
+              <tr><td>Ana R.</td><td>Mandado</td><td><span class="tag b">En curso</span></td><td>Bs 52</td></tr>
+              <tr><td>Pedro G.</td><td>Viaje</td><td><span class="tag ok">Finalizado</span></td><td>Bs 18</td></tr>
+              <tr><td>Lucía V.</td><td>Viaje</td><td><span class="tag warn">Buscando</span></td><td>Bs 30</td></tr>
+              <tr><td>Marco T.</td><td>Mandado</td><td><span class="tag ok">Finalizado</span></td><td>Bs 47</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

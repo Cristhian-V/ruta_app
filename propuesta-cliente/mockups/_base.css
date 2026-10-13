@@ -1,0 +1,225 @@
+/* =========================================================
+   _base.css  ·  Estilos compartidos para los mockups de pantallas
+   Paleta y componentes reutilizables. Editá estos tokens para
+   cambiar el branding (color de marca, nombre, etc.).
+   ========================================================= */
+
+:root{
+  --brand:#2563eb;
+  --brand-dark:#1d4ed8;
+  --brand-soft:#dbeafe;
+  --ok:#22c55e;
+  --ok-dark:#16a34a;
+  --warn:#f59e0b;
+  --danger:#ef4444;
+  --ink:#0f172a;
+  --muted:#64748b;
+  --line:#e2e8f0;
+  --bg:#f1f5f9;
+  --card:#ffffff;
+  --radius:16px;
+  --shadow:0 8px 24px rgba(15,23,42,.10);
+}
+
+*{box-sizing:border-box;-webkit-font-smoothing:antialiased}
+html,body{margin:0;padding:0}
+body.canvas{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:#e5e9f0;
+  display:flex;align-items:center;justify-content:center;
+  min-height:100vh;
+}
+body.canvas.wide{align-items:flex-start;padding:24px}
+
+/* ---------- Marco tipo teléfono ---------- */
+.phone{
+  width:384px;height:804px;padding:12px;
+  background:#0b1220;border-radius:44px;
+  box-shadow:0 30px 60px rgba(15,23,42,.35);
+}
+.screen{
+  position:relative;width:360px;height:780px;
+  background:var(--card);border-radius:34px;overflow:hidden;
+  display:flex;flex-direction:column;
+}
+.statusbar{
+  height:28px;flex:0 0 28px;display:flex;align-items:center;justify-content:space-between;
+  padding:0 20px;font-size:12px;font-weight:600;color:var(--ink);
+  background:transparent;position:relative;z-index:5;
+}
+.statusbar.on-dark{color:#fff}
+.statusbar .sb-right{letter-spacing:1px;font-size:11px}
+
+/* ---------- Barra superior ---------- */
+.appbar{
+  display:flex;align-items:center;gap:10px;padding:6px 18px 12px;z-index:5;
+}
+.appbar .title{font-weight:700;font-size:17px}
+.appbar .spacer{flex:1}
+.iconbtn{
+  width:36px;height:36px;border-radius:50%;display:grid;place-items:center;
+  background:#fff;color:var(--ink);box-shadow:var(--shadow);font-size:16px;
+}
+.avatar{
+  width:38px;height:38px;border-radius:50%;background:var(--brand-soft);color:var(--brand-dark);
+  display:grid;place-items:center;font-weight:700;font-size:14px;
+}
+
+/* ---------- Cuerpo / layout ---------- */
+.body{flex:1;display:flex;flex-direction:column;min-height:0}
+.pad{padding:0 18px}
+.center{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px}
+.grow{flex:1;min-height:0}
+
+/* ---------- Simulación de mapa ---------- */
+.mapsim{
+  position:relative;overflow:hidden;background:#e9eef3;
+}
+.mapsim::before{
+  content:"";position:absolute;inset:-30%;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 54px, #d6dee6 54px 60px),
+    repeating-linear-gradient(90deg, transparent 0 70px, #d6dee6 70px 76px);
+}
+.mapsim::after{
+  content:"";position:absolute;left:-10%;top:30%;width:140%;height:14px;
+  background:#cdd8e1;transform:rotate(-24deg);
+  box-shadow:0 120px 0 #cdd8e1, 0 -120px 0 #d6dee6;
+}
+.mapsim .park{position:absolute;background:#d8e8d6;border-radius:8px;opacity:.9}
+.mapsim svg{position:absolute;inset:0;width:100%;height:100%}
+
+/* pin genérico */
+.pin{
+  position:absolute;width:16px;height:16px;border-radius:50% 50% 50% 0;
+  transform:rotate(-45deg);box-shadow:0 2px 6px rgba(0,0,0,.25);
+}
+.pin.b{background:var(--brand);left:0;right:0;margin:auto;top:0;bottom:0;
+  width:18px;height:18px;border:2px solid #fff;transform:rotate(-45deg) translateY(0);
+  left:24px;right:auto;top:80px}
+.pin.g{background:var(--ok)}
+.pin.r{background:var(--danger)}
+
+.hint-pill{
+  position:absolute;background:#fff;color:var(--ink);font-size:11px;font-weight:600;
+  padding:6px 10px;border-radius:999px;box-shadow:var(--shadow);
+}
+
+/* ---------- Tarjetas ---------- */
+.card{
+  background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:16px;
+}
+.card.flat{box-shadow:none;border:1px solid var(--line)}
+.sheet{
+  background:#fff;border-radius:24px 24px 0 0;box-shadow:0 -12px 30px rgba(15,23,42,.12);
+  padding:18px 18px 22px;margin-top:-26px;position:relative;z-index:4;
+}
+.handle{width:44px;height:5px;border-radius:999px;background:var(--line);margin:0 auto 14px}
+
+/* ---------- Texto ---------- */
+h1,h2,h3{margin:0;color:var(--ink)}
+.h1{font-size:24px;font-weight:800;letter-spacing:-.3px}
+.h2{font-size:18px;font-weight:700}
+.label{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+.muted{color:var(--muted)}
+.small{font-size:12px}
+.tiny{font-size:11px}
+.big{font-size:28px;font-weight:800}
+.price{font-weight:800}
+
+/* ---------- Botones ---------- */
+.btn{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  height:52px;border-radius:14px;border:0;width:100%;
+  font-size:16px;font-weight:700;cursor:pointer;
+}
+.btn.primary{background:var(--brand);color:#fff}
+.btn.primary.dark{background:var(--ink)}
+.btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn.ok{background:var(--ok);color:#fff}
+.btn.danger{background:#fee2e2;color:var(--danger)}
+.btn.sm{height:42px;font-size:14px;border-radius:12px}
+
+/* ---------- Chips / opciones ---------- */
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{
+  padding:8px 14px;border-radius:999px;background:#f1f5f9;color:var(--muted);
+  font-size:13px;font-weight:600;
+}
+.chip.on{background:var(--brand);color:#fff}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;
+  font-size:12px;font-weight:700;
+}
+.badge.cash{background:#dcfce7;color:#166534}
+.badge.soft{background:var(--brand-soft);color:var(--brand-dark)}
+
+/* ---------- Inputs ---------- */
+.field{
+  display:flex;align-items:center;gap:10px;height:54px;padding:0 16px;
+  border:1px solid var(--line);border-radius:14px;background:#fff;
+}
+.field .flag{font-weight:700;color:var(--ink)}
+.field input{border:0;outline:0;font-size:16px;flex:1;background:transparent;font-family:inherit}
+.field .ph{color:#94a3b8}
+
+/* ---------- Listas ---------- */
+.list{display:flex;flex-direction:column;gap:2px}
+.row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row .ic{width:38px;height:38px;border-radius:10px;background:#f1f5f9;display:grid;place-items:center;font-size:17px}
+.row .t{flex:1;min-width:0}
+.row .t .a{font-weight:600;font-size:14px;color:var(--ink)}
+.row .t .b{font-size:12px;color:var(--muted)}
+.row .v{font-weight:800}
+
+/* ---------- Estrellas ---------- */
+.stars{font-size:30px;color:#fbbf24;letter-spacing:4px}
+
+/* ---------- Toggle conductor ---------- */
+.switch{width:64px;height:36px;border-radius:999px;background:var(--ok);position:relative;box-shadow:inset 0 0 0 1px rgba(0,0,0,.05)}
+.switch .knob{position:absolute;top:4px;right:4px;width:28px;height:28px;border-radius:50%;background:#fff;box-shadow:0 2px 5px rgba(0,0,0,.3)}
+
+/* ---------- Ruta origen-destino ---------- */
+.route{display:flex;flex-direction:column;gap:0}
+.route .dot{width:10px;height:10px;border-radius:50%}
+.route .dot.o{background:var(--brand)}
+.route .dot.d{background:var(--danger)}
+.route .linev{width:2px;background:var(--line);flex:1;margin-left:4px}
+
+/* ---------- Barra progreso ---------- */
+.progress{height:8px;border-radius:999px;background:#eef2f7;overflow:hidden}
+.progress > i{display:block;height:100%;background:var(--brand)}
+
+/* =================  Panel ADMIN (web) ================= */
+.admin{
+  width:1180px;height:720px;background:#f8fafc;border-radius:16px;overflow:hidden;
+  display:flex;box-shadow:0 30px 60px rgba(15,23,42,.25);font-family:inherit;
+}
+.admin .side{width:230px;background:#0b1220;color:#cbd5e1;padding:20px 16px;display:flex;flex-direction:column;gap:6px}
+.admin .side .brand{color:#fff;font-weight:800;font-size:18px;margin-bottom:18px;display:flex;align-items:center;gap:8px}
+.admin .side a{padding:11px 12px;border-radius:10px;font-size:14px;display:flex;gap:10px;align-items:center;color:#cbd5e1;text-decoration:none}
+.admin .side a.on{background:var(--brand);color:#fff}
+.admin .main{flex:1;display:flex;flex-direction:column;min-width:0}
+.admin .top{height:64px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 24px;gap:14px}
+.admin .content{padding:24px;display:flex;flex-direction:column;gap:20px;overflow:hidden}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
+.kpi .k{font-size:12px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.4px}
+.kpi .num{font-size:26px;font-weight:800;color:var(--ink);margin-top:6px}
+.kpi .d{font-size:12px;font-weight:700;color:var(--ok-dark);margin-top:4px}
+.panels{display:grid;grid-template-columns:1.4fr 1fr;gap:16px;flex:1;min-height:0}
+.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;min-height:0}
+.panel .ph{font-weight:700;margin-bottom:14px;font-size:15px}
+.bars{display:flex;align-items:flex-end;gap:14px;flex:1;padding-top:10px}
+.bars .col{flex:1;display:flex;flex-direction:column;align-items:center;gap:8px;height:100%;justify-content:flex-end}
+.bars .bar{width:100%;border-radius:8px 8px 0 0;background:linear-gradient(180deg,#60a5fa,#2563eb)}
+.bars .lbl{font-size:11px;color:var(--muted)}
+table.mini{width:100%;border-collapse:collapse;font-size:13px}
+table.mini th{text-align:left;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.4px;padding-bottom:8px}
+table.mini td{padding:9px 0;border-top:1px solid var(--line);color:var(--ink)}
+.tag{padding:3px 9px;border-radius:999px;font-size:11px;font-weight:700}
+.tag.ok{background:#dcfce7;color:#166534}
+.tag.warn{background:#fef3c7;color:#92400e}
+.tag.b{background:var(--brand-soft);color:var(--brand-dark)}

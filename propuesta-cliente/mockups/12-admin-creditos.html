@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="_base.css">
+<title>12 · Admin · Crédito y recargas</title>
+</head>
+<body class="canvas wide">
+  <div class="admin">
+    <aside class="side">
+      <div class="brand">🛣️ Ruta <span style="font-size:11px;font-weight:600;opacity:.6">ADMIN</span></div>
+      <a>📊 Dashboard</a>
+      <a>👥 Usuarios</a>
+      <a>🚗 Conductores</a>
+      <a>🧾 Viajes</a>
+      <a>🛒 Mandados</a>
+      <a>💰 Tarifas y comisiones</a>
+      <a class="on">💳 Crédito y recargas</a>
+      <a>📈 Reportes</a>
+      <a>⚙️ Configuración</a>
+    </aside>
+
+    <div class="main">
+      <div class="top">
+        <div style="font-weight:700;font-size:16px">Crédito de conductores</div>
+        <div style="flex:1"></div>
+        <span class="badge soft">Comisión: 10 % del viaje</span>
+        <div class="avatar">AD</div>
+      </div>
+
+      <div class="content">
+        <div class="kpis">
+          <div class="kpi"><div class="k">Solicitudes pendientes</div><div class="num">3</div><div class="d" style="color:#b45309">▲ Requieren acción</div></div>
+          <div class="kpi"><div class="k">Saldos de conductores</div><div class="num">Bs 540</div><div class="d">35 cuentas</div></div>
+          <div class="kpi"><div class="k">Recargas hoy</div><div class="num">Bs 200</div><div class="d">8 pagos en efectivo</div></div>
+          <div class="kpi"><div class="k">Comisión recaudada</div><div class="num">Bs 152</div><div class="d">10% · 42 servicios hoy</div></div>
+        </div>
+
+        <div class="panels">
+          <div class="panel">
+            <div class="ph">Solicitudes de recarga (tareas)</div>
+            <table class="mini">
+              <tr><th>Conductor</th><th>Monto</th><th>Pago</th><th>Estado</th><th>Acción</th></tr>
+              <tr><td>Juan Pérez</td><td>Bs 20</td><td>Efectivo</td><td><span class="tag warn">Pendiente</span></td><td><span class="tag b">Cargar</span></td></tr>
+              <tr><td>Luis Mamani</td><td>Bs 50</td><td>Efectivo</td><td><span class="tag warn">Pendiente</span></td><td><span class="tag b">Cargar</span></td></tr>
+              <tr><td>Marco T.</td><td>Bs 10</td><td>Efectivo</td><td><span class="tag warn">Pendiente</span></td><td><span class="tag b">Cargar</span></td></tr>
+              <tr><td>Ana G.</td><td>Bs 20</td><td>Efectivo</td><td><span class="tag ok">Acreditado</span></td><td>—</td></tr>
+              <tr><td>Pedro R.</td><td>Bs 30</td><td>Efectivo</td><td><span class="tag ok">Acreditado</span></td><td>—</td></tr>
+            </table>
+            <p class="tiny muted" style="margin-top:auto;padding-top:12px">El conductor solicita la recarga desde la app tras pagar en efectivo; el admin la acredita aquí.</p>
+          </div>
+
+          <div class="panel">
+            <div class="ph">Cargar crédito</div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <div>
+                <div class="label" style="margin-bottom:6px">Conductor</div>
+                <div class="field" style="height:46px"><span>👤</span><span style="font-weight:600;font-size:14px">Juan Pérez</span></div>
+              </div>
+              <div>
+                <div class="label" style="margin-bottom:6px">Monto (Bs)</div>
+                <div class="field" style="height:46px"><span>💵</span><span style="font-weight:600;font-size:14px">20</span></div>
+              </div>
+              <div>
+                <div class="label" style="margin-bottom:6px">Método</div>
+                <span class="badge cash">💵 Efectivo recibido</span>
+              </div>
+              <button class="btn primary" style="height:46px;font-size:14px;margin-top:4px">Acreditar Bs 20</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

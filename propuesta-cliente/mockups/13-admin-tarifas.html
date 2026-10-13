@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="_base.css">
+<title>13 · Admin · Tarifas y comisiones</title>
+</head>
+<body class="canvas wide">
+  <div class="admin">
+    <aside class="side">
+      <div class="brand">🛣️ Ruta <span style="font-size:11px;font-weight:600;opacity:.6">ADMIN</span></div>
+      <a>📊 Dashboard</a>
+      <a>👥 Usuarios</a>
+      <a>🚗 Conductores</a>
+      <a>🧾 Viajes</a>
+      <a>🛒 Mandados</a>
+      <a class="on">💰 Tarifas y comisiones</a>
+      <a>💳 Crédito y recargas</a>
+      <a>📈 Reportes</a>
+    </aside>
+
+    <div class="main">
+      <div class="top">
+        <div style="font-weight:700;font-size:16px">Tarifas y comisiones</div>
+        <div style="flex:1"></div>
+        <span class="badge soft">Los cambios se aplican en tiempo real</span>
+        <div class="avatar">AD</div>
+      </div>
+
+      <div class="content">
+        <div class="kpis">
+          <div class="kpi"><div class="k">Costo por km</div><div class="num">Bs 3,50</div><div class="d">por tramo recorrido</div></div>
+          <div class="kpi"><div class="k">Costo por minuto</div><div class="num">Bs 0,50</div><div class="d">tiempo estimado</div></div>
+          <div class="kpi"><div class="k">Uso de la app</div><div class="num">Bs 6,00</div><div class="d">cargo fijo por viaje</div></div>
+          <div class="kpi"><div class="k">Comisión</div><div class="num">10 %</div><div class="d">del total del viaje</div></div>
+        </div>
+
+        <div class="panels">
+          <div class="panel">
+            <div class="ph">Cálculo de la tarifa</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px 14px">
+              <div><div class="label" style="margin-bottom:5px">Costo por km (Bs)</div>
+                <div class="field" style="height:44px"><span>🛣️</span><span style="font-weight:600;font-size:14px">3,50</span></div></div>
+              <div><div class="label" style="margin-bottom:5px">Costo por minuto (Bs)</div>
+                <div class="field" style="height:44px"><span>⏱️</span><span style="font-weight:600;font-size:14px">0,50</span></div></div>
+              <div><div class="label" style="margin-bottom:5px">Uso de la app (Bs)</div>
+                <div class="field" style="height:44px"><span>📱</span><span style="font-weight:600;font-size:14px">6,00</span></div></div>
+              <div><div class="label" style="margin-bottom:5px">Comisión administrador</div>
+                <div class="field" style="height:44px"><span>💰</span><span style="font-weight:600;font-size:14px">10 %</span></div></div>
+            </div>
+
+            <div style="background:#0b1220;color:#dbeafe;border-radius:10px;padding:12px 14px;margin-top:14px;font-family:monospace;font-size:12px;line-height:1.6">
+              Tarifa = (km × Bs 3,50) + (min × Bs 0,50) + Bs 6,00<br>
+              Tarifa final = Tarifa × multiplicador (lluvia / hora pico)
+            </div>
+
+            <div class="label" style="margin:14px 0 6px">Ejemplo · 6 km · 18 min</div>
+            <table class="mini">
+              <tr><td>6 km × Bs 3,50</td><td style="text-align:right">Bs 21,00</td></tr>
+              <tr><td>18 min × Bs 0,50</td><td style="text-align:right">Bs 9,00</td></tr>
+              <tr><td>Uso de la app</td><td style="text-align:right">Bs 6,00</td></tr>
+              <tr><td><b>Base</b></td><td style="text-align:right"><b>Bs 36,00</b></td></tr>
+              <tr><td>Con lluvia (× 1,5)</td><td style="text-align:right">Bs 54,00</td></tr>
+            </table>
+          </div>
+
+          <div class="panel">
+            <div class="ph">Tarifas dinámicas</div>
+            <div class="label" style="margin-bottom:6px">Lluvia</div>
+            <div class="field" style="height:46px;margin-bottom:16px"><span>🌧️</span><span style="font-weight:600;font-size:14px">Multiplicador</span><span style="flex:1"></span><span style="font-weight:800">1,5×</span></div>
+
+            <div class="label" style="margin-bottom:6px">Horas pico</div>
+            <table class="mini">
+              <tr><th>Franja</th><th>Multiplicador</th></tr>
+              <tr><td>07:00 – 09:00</td><td><span class="tag b">1,3×</span></td></tr>
+              <tr><td>12:00 – 14:00</td><td><span class="tag b">1,2×</span></td></tr>
+              <tr><td>18:00 – 21:00</td><td><span class="tag b">1,5×</span></td></tr>
+            </table>
+
+            <p class="tiny muted" style="margin-top:auto;padding-top:12px">El multiplicador puede definirse en <b>porcentaje</b> (ej. +50 %) o como <b>número</b> (ej. × 1,5).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

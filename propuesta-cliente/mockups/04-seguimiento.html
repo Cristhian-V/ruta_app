@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="_base.css">
+<title>04 · Seguimiento en vivo</title>
+</head>
+<body class="canvas">
+  <div class="phone"><div class="screen">
+    <div class="statusbar on-dark" style="position:absolute;width:100%"><span>9:41</span><span class="sb-right">●●● ▂▄▆ ▮</span></div>
+
+    <div class="mapsim" style="flex:1">
+      <svg viewBox="0 0 360 620" preserveAspectRatio="none">
+        <path d="M70 520 C150 460 120 360 210 300 S300 180 290 90"
+              fill="none" stroke="#1d4ed8" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="70" cy="520" r="9" fill="#2563eb" stroke="#fff" stroke-width="4"/>
+        <circle cx="290" cy="90" r="9" fill="#ef4444" stroke="#fff" stroke-width="4"/>
+        <g transform="translate(196,286)"><circle r="18" fill="#0b1220"/><text x="0" y="7" text-anchor="middle" font-size="18">🚗</text></g>
+      </svg>
+      <div class="hint-pill" style="left:24px;top:70px;background:#0b1220;color:#fff">Llega en <b>3 min</b></div>
+    </div>
+
+    <div class="sheet">
+      <div class="handle"></div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px">
+        <span class="badge soft">En camino</span>
+        <span class="tiny muted">Viaje en curso</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px">
+        <div class="avatar" style="width:52px;height:52px;font-size:18px">JP</div>
+        <div style="flex:1">
+          <div style="font-weight:800">Juan Pérez</div>
+          <div class="tiny muted">⭐ 4,9 · Toyota Corolla gris</div>
+          <div class="tiny" style="margin-top:2px;font-weight:700">Placa 1234-ABC</div>
+        </div>
+        <div class="iconbtn">📞</div>
+        <div class="iconbtn">💬</div>
+      </div>
+      <div class="route" style="margin-top:16px">
+        <div style="display:flex;gap:10px;align-items:center"><span class="dot o"></span><span class="small">Tu ubicación actual</span></div>
+        <div class="linev" style="height:16px"></div>
+        <div style="display:flex;gap:10px;align-items:center"><span class="dot d"></span><span class="small">Av. Monseñor Rivero #200</span></div>
+      </div>
+      <button class="btn ghost sm" style="margin-top:16px">Compartir viaje</button>
+    </div>
+  </div></div>
+</body>
+</html>

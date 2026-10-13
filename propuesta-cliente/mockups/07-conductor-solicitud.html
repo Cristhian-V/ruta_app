@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="_base.css">
+<title>07 · Nueva solicitud (conductor)</title>
+</head>
+<body class="canvas">
+  <div class="phone"><div class="screen">
+    <div class="statusbar on-dark" style="background:#0b1220"><span>9:41</span><span class="sb-right">●●● ▂▄▆ ▮</span></div>
+
+    <div style="background:#0b1220;color:#fff;padding:6px 18px 16px">
+      <div class="tiny" style="color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;font-weight:700">Nueva solicitud</div>
+      <div style="font-size:22px;font-weight:800;margin-top:4px">⚡ Se acaba en <span style="color:#fbbf24">0:14</span></div>
+    </div>
+
+    <div class="mapsim" style="height:280px">
+      <svg viewBox="0 0 360 280" preserveAspectRatio="none">
+        <path d="M40 240 C120 200 140 120 250 90 S320 60 330 50"
+              fill="none" stroke="#1d4ed8" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="40" cy="240" r="8" fill="#2563eb" stroke="#fff" stroke-width="3"/>
+        <circle cx="330" cy="50" r="8" fill="#ef4444" stroke="#fff" stroke-width="3"/>
+      </svg>
+    </div>
+
+    <div class="sheet" style="margin-top:-40px;flex:1">
+      <div class="handle"></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+        <div><div class="price" style="font-size:26px">Bs 36</div><div class="tiny muted">Tarifa estimada</div></div>
+        <div style="text-align:right"><div style="font-weight:800">6,0 km</div><div class="tiny muted">≈ 18 min</div></div>
+      </div>
+
+      <div class="card flat" style="padding:14px">
+        <div class="route">
+          <div style="display:flex;gap:10px;align-items:center;padding-bottom:6px"><span class="dot o"></span><div class="t"><div class="a small" style="font-weight:700">Recogida</div><div class="tiny muted">Av. América #150</div></div></div>
+          <div class="linev" style="height:18px"></div>
+          <div style="display:flex;gap:10px;align-items:center"><span class="dot d"></span><div class="t"><div class="a small" style="font-weight:700">Destino</div><div class="tiny muted">Av. Monseñor Rivero #200</div></div></div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:8px;margin:14px 0">
+        <span class="badge cash">💵 Efectivo</span>
+        <span class="tiny muted">El pasajero paga en efectivo</span>
+      </div>
+
+      <div style="display:flex;gap:10px;margin-top:auto">
+        <button class="btn danger" style="flex:1">Rechazar</button>
+        <button class="btn ok" style="flex:2">Aceptar viaje</button>
+      </div>
+    </div>
+  </div></div>
+</body>
+</html>
